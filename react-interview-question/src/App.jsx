@@ -6,6 +6,9 @@ import ChildProps from './components/ChildProps'
 import Conditional from './components/Conditional'
 import EventHandling from './components/EventHandling'
 import Forms from './components/Forms'
+import CSSStyling from './components/CSSStyling'
+import ComponentTypes from './components/ComponentTypes'
+import InnerHtml from './components/InnerHtml'
 
 
 function App() {
@@ -31,8 +34,10 @@ function App() {
       {/* <Conditional/> 
        Ternary Operator */}
        {/* <EventHandling/> */}
-       <Forms/>
-
+       {/* <Forms/>
+       <CSSStyling/> */}
+       {/* <ComponentTypes/> */}
+       {/* <InnerHtml/> */}
     </>
   )
 }
