@@ -9,6 +9,7 @@ import Forms from './components/Forms'
 import CSSStyling from './components/CSSStyling'
 import ComponentTypes from './components/ComponentTypes'
 import InnerHtml from './components/InnerHtml'
+import CallingAPI from './components/CallingAPI'
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
        <CSSStyling/> */}
        {/* <ComponentTypes/> */}
        {/* <InnerHtml/> */}
+       <CallingAPI/>
     </>
   )
 }
