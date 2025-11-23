@@ -9,14 +9,26 @@ function CallingAPI() {
 
 
   // Post Method
-  const PostUser = () => {
+  const PostUser = (e) => {
+    // prevent default form submission which reloads the page
+    if (e && e.preventDefault) e.preventDefault()
+
+    // basic validation
+    if (!name || !name.trim()) {
+      console.log('Name is required')
+      return
+    }
+
     axios.post("https://6921f967512fb4140be1ea44.mockapi.io/users", {
         name: name,
         age: 21,
         hobbies: [ "Gym", "Cooking", "Riding", "Gaming", "Building", "Designing" ]
     })
     .then((res) => {
-      console.log(res.data.name)
+      console.log('Created:', res.data)
+      // clear input and refresh list
+      setName("")
+      getData()
     })
     .catch((err) => {
       console.log(err)
@@ -64,14 +76,15 @@ function CallingAPI() {
   return (
     <div>
        <h1>This is function for REST API</h1> 
-       <form action="">
-        <input 
-        type="text" 
-        placeholder='Enter your Name' 
-        onChange={(event) => setName(event.target.value)}/>
+      <form onSubmit={PostUser}>
+       <input 
+       type="text" 
+       placeholder='Enter your Name' 
+       value={name}
+       onChange={(event) => setName(event.target.value)}/>
 
-       <button onClick={PostUser}>Post Data</button>
-       </form>
+      <button type="submit">Post Data</button>
+      </form>
        {users.map((user) => {
         return (
           <>
