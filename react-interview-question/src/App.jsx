@@ -18,6 +18,8 @@ import Users from './components/Users'
 import Posts from './components/Posts'
 import LazyLorem from './components/LazyLorem'
 import LazyLoading from './components/LazyLoading'
+import Helper from './components/Helper'
+import UsersFromCustomHook from './components/UsersFromCustomHook'
 
 
 function App() {
@@ -55,7 +57,9 @@ function App() {
         {/* <Posts/>
         <hr/>
         <Users/> */}
-        <LazyLoading/>
+        {/* <LazyLoading/> */}
+        {/* <Helper/> */}
+        <UsersFromCustomHook/>
     </>
   )
 }
